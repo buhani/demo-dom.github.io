@@ -1,0 +1,135 @@
+<!doctype HTML>
+<html>
+<head>
+	<script>
+		function demo4js () {
+			document.getElementById('demo4').innerHTML='Paragraph Changed'
+		}
+	</script>
+</head>
+<body>
+	<h2>JS Can Change HTML Content</h2>
+	<p id="demo1">JS can change HTML content</p>
+	<button type="button" onclick="document.getElementById('demo1').innerHTML='Hello Javascript'">Click Me!</button>
+<hr>
+	<h2>JS Can Change HTML Atribute</h2>
+	<img id="lampu" src="images/pic_bulboff.gif" >
+	<button type="button" onclick="document.getElementById('lampu').src='images/pic_bulbon.gif'">Turn On</button>
+	<button type="button" onclick="document.getElementById('lampu').src='images/pic_bulboff.gif'">Turn Off</button>
+<hr>
+	<h2>JS Can Change CSS Style</h2>
+	<p id="demo2">JS Can Change CSS Style</p>
+	<button type="button" onclick="document.getElementById('demo2').style.backgroundColor='red'">Change Color!</button>
+<hr>
+	<h2>JS Can Show/Hide HTML Element (CSS)</h2>
+	<p id="demo3">JS Can Show/Hide HTML Element</p>
+	<button type="button" onclick="document.getElementById('demo3').style.display='none'">Hide</button>
+
+	<button type="button" onclick="document.getElementById('demo3').style.display='block'">Show</button>
+<hr>
+	<h2>JS Script in &lt;Head&gt;</h2>
+	<p id="demo4">JS Script placed inside Head element</p>
+
+	<button type="button" onclick="demo4js()">Change!</button>
+<hr>
+	<h2>JS Script in &lt;Body&gt;</h2>
+	<p id="demo5">JS Script placed inside Body element</p>
+
+	<button type="button" onclick="demo5js()">Change!</button>
+
+	<script>
+		function demo5js () {
+			document.getElementById('demo5').innerHTML='Paragraph Changed'
+		}
+	</script>
+<hr>
+	<h2>JS Script in External file</h2>
+	<p id="demo6">JS Script placed in External file</p>
+
+	<button type="button" onclick="demo6js()">Change!</button>
+	<script src="demo-9-dom.js"></script>
+<hr>
+	<h2>JS Output: window.alert()</h2>
+	<p>Reload page to show window alert</p>
+	<script>window.alert(5 + 6);</script>
+<hr>
+	<h2>JS Output: document.write()</h2>
+	<p>The argument result of <B>document.write(5 + 6)</B> is below </p>
+	<script>document.write(5 + 6);</script>
+
+	<p>Using document.write() after an HTML document is fully loaded, <B>will delete all existing HTML</B>
+	<br>
+	The <b>document.write()</b> button below will remove all HTML loaded</p>
+	<button onclick="document.write(5 + 6)">Try it</button>
+<hr>
+	<h2>Using innerHTML()</h2>
+	<p>The argument result of <B>innerHTML = 5 + 6;</B> is below </p>
+	<p id="demo7"></p>
+	<script>document.getElementById("demo7").innerHTML = 5 + 6;</script>
+	
+<hr>
+	<h2>Using console.log()</h2>
+	<p>
+	Activate debugging in your browser (Chrome, IE, Firefox) with F12, and select "Console" in the debugger menu.
+	</p>
+
+	<script>console.log(5 + 6);</script>
+<hr>
+	<h2>JS Syntax</h2>
+	
+	<script>
+		var today = new Date();
+		var hourNow = today.getHours();
+		var greeting;
+
+		if (hourNow > 18) {
+		    greeting = 'Good evening!';
+		} else if (hourNow > 12) {
+		    greeting = 'Good afternoon!';
+		} else if (hourNow > 0) {
+		    greeting = 'Good morning!';
+		} else {
+		    greeting = 'Welcome!';
+		}
+		document.write(greeting);
+	</script>
+<hr>
+	<h2>Comparison - if else</h2>
+	<script>
+		var namaSaya="Hanifah";
+		var usiaSaya=30;
+		var wargaFilkom=true;
+		document.write(namaSaya+" berusia "+usiaSaya+" tahun. ");
+		
+		if(wargaFilkom){
+			document.write(namaSaya+" adalah Warga Filkom. ");
+		}else{
+			document.write(namaSaya+" BUKAN warga Filkom. ");
+		} ;
+
+		if(wargaFilkom===true && usiaSaya<=24 && usiaSaya>=18){
+			document.write(namaSaya+" adalah Mahasiswa Filkom. ");
+		}else if(wargaFilkom===true && usiaSaya>24){
+			document.write(namaSaya+" adalah Dosen Filkom. ");
+		}else{
+			document.write(namaSaya+" bukan warga Filkom. ");
+		}//
+	</script>
+	<h2>Switch</h2>
+	<script>
+		var lampu="merah"
+		lampu="hijau"
+		switch(lampu){
+			case "merah": document.write("Berhenti!");
+			break;
+			case "kuning":document.write("Hati-hati!");
+			break;
+			case "hijau": document.write("Jalan!");
+			break;
+			default: document.write("Invalid");
+		}
+	</script>
+
+
+</body>
+</html>
